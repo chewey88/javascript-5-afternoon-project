@@ -192,6 +192,13 @@ function secretNumber() {
 
   return {
     // Code here
+    addToSecret(num){
+      return secret += num
+    },
+
+    takeAwayFromSecret(num) {
+      return secret -= num
+    }
   };
 }
 
@@ -223,3 +230,15 @@ function timeOutCounter() {
   }
 }
 timeOutCounter();
+function timeOutCounter() {
+  function saveI(i){
+    return function(){
+      return console.log(i)
+    }
+  }
+  for (var i = 0; i <= 5; i++) 
+    {
+      setTimeout(saveI(i), i * 1000);
+    }
+  }
+  timeOutCounter()
